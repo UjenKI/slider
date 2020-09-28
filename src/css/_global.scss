@@ -1,0 +1,55 @@
+.slider{
+    margin-top: 193px;
+    position: relative;
+    .slide_overflow{
+        overflow: hidden;
+        width: 1000px;
+        margin: 0 auto;
+        .slider-wrapper{
+            transition: 0.5s ease-in-out;
+        }
+    }
+    button.arrow-btn{
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border: 1px solid #bdb9b9;
+        outline: none;
+        border-radius: 50%;
+        background: url(../image/arrow.png) 50% 55% no-repeat, center, #fff;
+        top: 50%;
+        transition: 0.3s ease-in;
+        cursor: pointer;
+        &:hover{
+            background-color: gray;
+            background-position: 50% 70%;
+        }
+    }
+    button.arrow-btn.prev{
+        left: 16%;
+        transform: translateY(-50%) rotate(90deg);
+    }
+    button.arrow-btn.next{
+        right: 16%;
+        transform: translateY(-50%) rotate(-90deg);
+    }
+    .dots-list{
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        .dot{
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            border: 1px solid lightgray;
+            outline: none;
+            margin: 5px;
+            cursor: pointer;
+        }
+        .dot-active{
+            background: #b1b0b0;
+            transition: 0.2s ease-in;
+        }
+    }
+}
+
